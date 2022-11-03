@@ -1,30 +1,53 @@
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body class="bg-light">
-    <main>
-      <!-- Component içine parametre gönderme -->
-      <!-- @require('../partials/header.html', {"title": "First Section", "logo": "logo2.svg"}) -->
 
-      <section class="container content">
-        <h1 class="text-center my-5">Product List</h1>
-        <div class="row">
-          <div class="col-lg-9 order-2 order-lg-1">
-            @require('../partials/product-list.html')
-          </div>
-          <div class="col-lg-3 order-1 order-lg-2">
-            <div class="card mb-5 mt-lg-0">
-              <div class="card-header">Basket</div>
-              <div class="card-body">Sepetteki ürünler</div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+</head>
+
+<body class="bg-light">
+  <main>
+    <!-- Component içine parametre gönderme -->
+    <!-- @require('../partials/header.html', {"title": "First Section", "logo": "logo2.svg"}) -->
+    @require('../partials/header.html')
+    <section class="container-fluid px-0">
+      <div class="row">
+        <div class="ml-0 col-3 min-vh-100 text-bg-dark">
+          @require('../partials/sidebar.html')
+        </div>
+
+
+        <div class="col-9 ml-0" style="width: 73%;">
+          <div class="px-4 text-center">
+            <img width="479" height="185" src="https://dukamarket.b-cdn.net/wp-content/uploads/2021/06/shop-1.png"
+              class="attachment-full size-full wp-post-image" alt="" loading="lazy"
+              srcset="https://dukamarket.b-cdn.net/wp-content/uploads/2021/06/shop-1.png 479w, https://dukamarket.b-cdn.net/wp-content/uploads/2021/06/shop-1-300x116.png 300w, https://dukamarket.b-cdn.net/wp-content/uploads/2021/06/shop-1-220x85.png 220w, https://dukamarket.b-cdn.net/wp-content/uploads/2021/06/shop-1-58x22.png 58w, https://dukamarket.b-cdn.net/wp-content/uploads/2021/06/shop-1-64x25.png 64w"
+              sizes="(max-width: 479px) 100vw, 479px">
+            
+            <div class="col-lg-6 mx-auto">
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <button type="button" class="btn btn-warning btn-lg px-4 gap-3">Ürünleri İncele</button>
+                
+              </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      @require('../partials/footer.html')
-    </main>
-  </body>
+          <h2 class="text-center my-3 text-warning py-2">ÜRÜNLER</h2>
+          @require('../partials/product-list.html')
+        </div>
+
+      </div>
+<hr>
+    </section>
+
+    @require('../partials/footer.html')
+  </main>
+</body>
+
 </html>

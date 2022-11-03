@@ -1,0 +1,98 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+</head>
+
+<body class="bg-light">
+  <main>
+    <!-- Component içine parametre gönderme -->
+    <!-- @require('../partials/header.html', {"title": "First Section", "logo": "logo2.svg"}) -->
+    @require('../partials/header.html')
+    <section class="container-fluid px-0">
+      <div class="row">
+        <div class="ml-0 col-3 min-vh-100 text-bg-dark">
+          @require('../partials/sidebar.html')
+        </div>
+
+        <div class="col-9">
+          <div
+            class="div-form border border-5 border-warning d-flex flex-column align-items-center justify-content-center bg-dark text-light rounded">
+            <form class="form-app" id="register-page" action="login.html">
+              <div class="form-container" id="register-form-container">
+
+                <div class="input-area py-2">
+                  <label class="input-label" for="email">E-Posta:</label>
+                  <input type="email" id="email" name="email" required><br />
+                </div>
+
+                <div class="input-area py-2">
+                  <label class="input-label" for="password">Şifre:</label>
+                  <input type="password" id="password" name="password" required />
+
+                </div>
+
+                <div class="input-area py-2">
+                  <label class="input-label" for="password2">Şifre Tekrar:</label>
+                  <input type="password" id="password2" name="password2" required />
+                </div>
+
+                <div class="input-area py-2">
+                  <label class="input-label" for="fname">İsim:</label>
+                  <input type="text" id="fname" name="fname" required />
+                </div>
+
+                <div class="input-area py-2">
+                  <label class="input-label" for="sname">Soyisim:</label>
+                  <input type="text" id="sname" name="sname" required />
+                </div>
+
+                <div class="input-area py-2">
+                  <label class="input-label" for="phone">Telefon Numarası:</label>
+                  <input type="tel" id="phone" name="phone" pattern="[0-9]{11,11}" placeholder="05xxxxxxxxx" required />
+                </div>
+
+                <div class="input-area py-2">
+                  <label class="input-label" for="country">Şehir:</label>
+                  <select id="country">
+                    <option selected disabled>Şehrinizi seçiniz</option>
+                    <option value="ankara">Ankara</option>
+                    <option value="ist">İstanbul</option>
+                    <option value="eskisehir">Eskişehir</option>
+                    <option value="izmir">İzmir</option>
+                  </select><br><br>
+                </div>
+
+                <div class="input-area py-2">
+                  <input class="input-checkbox" type="checkbox" id="agree" name="agree">
+                  <label for="agree">Bilgilerimin doğruluğunu onaylıyorum.</label>
+                </div>
+
+                <div class="input-area py-2">
+                  <input class="input-checkbox" type="checkbox" id="news" name="news">
+                  <label for="news">Kampanyalardan haberdar olmak istiyorum.</label>
+                </div>
+
+                <button type="submit" class="btn btn-warning mx-5 my-2 " id="btn-login">Kayıt Ol</button>
+
+
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    @require('../partials/footer.html')
+  </main>
+</body>
+
+</html>

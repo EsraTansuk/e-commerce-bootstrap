@@ -37,6 +37,24 @@ module.exports = {
       template: "./src/views/about.html",  //input
     }),
 
+    new HtmlWebpackPlugin({
+      inject: "body",
+      title: "Giriş",
+      filename: "login.html", //output
+      template: "./src/views/login.html",  //input
+    }),
+
+    new HtmlWebpackPlugin({
+      inject: "body",
+      title: "Kayıt",
+      filename: "register.html", //output
+      template: "./src/views/register.html",  //input
+    }),
+
+   
+
+    
+
     // [].concat(
     //   pages.map(
     //     (page) =>
