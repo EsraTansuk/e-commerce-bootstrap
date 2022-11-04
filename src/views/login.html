@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>
     <%= htmlWebpackPlugin.options.title %>
   </title>
@@ -19,33 +22,33 @@
           @require('../partials/sidebar.html')
         </div>
 
-        <div class="col-9">
+        <div class="col-9 mt-5">
           <div
-            class="div-form border border-5 border-warning d-flex flex-column align-items-center justify-content-center bg-dark text-light rounded">
-            <form class="form-app" id="login-page" action="index.html">
-              <div>
+            class="div-form d-flex align-items-center justify-content-center">
+            <form class="row form-app w-50 border border-5 border-warning bg-dark text-light rounded row m-0 py-4 d-flex text-center" id="login-page" action="index.html">
+              <div class="col-12">
                 <label for="username">Kullanıcı Adı:</label><br />
-                <input type="text" id="username" name="username" placeholder="Kullanıcı Adı" required>
+                <input class="border border-warning border-1 rounded"  type="text" id="username" name="username" placeholder="Kullanıcı Adı" required>
               </div>
-              <div class="password">
+              <div class="password col-12">
                 <label for="password">Şifre:</label><br>
-                <input type="password" id="password" name="password" placeholder="Şifre" required>
+                <input class="border border-warning border-1 rounded"  type="password" id="password" name="password" placeholder="Şifre" required>
               </div>
-              <div>
+              <div class="col-12">
                 <button type="submit" class="btn btn-warning mx-5 my-1" id="btn-login">Giriş Yap</button>
               </div>
-              <div class="remember">
+              <div class="remember col-12">
                 <input type="checkbox" id="rememberMe" name="rememberme">
                 <label for="rememberme">Beni Hatırla</label>
               </div>
-              <div>
+              <div class="col-12">
                 <span class="psw"><a href="#" class="text-warning">Şifrenizi</a> unuttunuz mu?</span>
               </div>
             </form>
           </div>
         </div>
       </div>
-
+      <hr>
     </section>
 
     @require('../partials/footer.html')

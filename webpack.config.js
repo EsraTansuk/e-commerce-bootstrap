@@ -51,6 +51,27 @@ module.exports = {
       template: "./src/views/register.html",  //input
     }),
 
+    new HtmlWebpackPlugin({
+      inject: "body",
+      title: "Ürün",
+      filename: "product.html", //output
+      template: "./src/views/product.html",  //input
+    }),
+
+    new HtmlWebpackPlugin({
+      inject: "body",
+      title: "Ödeme",
+      filename: "checkout.html", //output
+      template: "./src/views/checkout.html",  //input
+    }),
+
+    new HtmlWebpackPlugin({
+      inject: "body",
+      title: "Ürün 1",
+      filename: "product1.html", //output
+      template: "./src/views/product1.html",  //input
+    }),
+
    
 
     

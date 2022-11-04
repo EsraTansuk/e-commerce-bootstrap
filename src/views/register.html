@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>
     <%= htmlWebpackPlugin.options.title %>
   </title>
@@ -19,46 +22,47 @@
           @require('../partials/sidebar.html')
         </div>
 
-        <div class="col-9">
-          <div
-            class="div-form border border-5 border-warning d-flex flex-column align-items-center justify-content-center bg-dark text-light rounded">
-            <form class="form-app" id="register-page" action="login.html">
+        <div class="col-9 mt-5">
+          <div class="div-form d-flex flex-column align-items-center justify-content-center">
+            <form
+              class="row form-app w-50 border border-5 border-warning bg-dark text-light rounded row m-0 py-4 d-flex "
+              id="register-page" action="login.html">
               <div class="form-container" id="register-form-container">
 
-                <div class="input-area py-2">
+                <div class="input-area py-2 col-12">
                   <label class="input-label" for="email">E-Posta:</label>
-                  <input type="email" id="email" name="email" required><br />
+                  <input class="border border-warning border-1 rounded" type="email" id="email" name="email" required><br />
                 </div>
 
-                <div class="input-area py-2">
+                <div class="input-area py-2 col-12">
                   <label class="input-label" for="password">Şifre:</label>
-                  <input type="password" id="password" name="password" required />
+                  <input class="border border-warning border-1 rounded" type="password" id="password" name="password" required />
 
                 </div>
 
-                <div class="input-area py-2">
+                <div class="input-area py-2 col-12">
                   <label class="input-label" for="password2">Şifre Tekrar:</label>
-                  <input type="password" id="password2" name="password2" required />
+                  <input class="border border-warning border-1 rounded"  type="password" id="password2" name="password2" required />
                 </div>
 
-                <div class="input-area py-2">
+                <div class="input-area py-2 col-12">
                   <label class="input-label" for="fname">İsim:</label>
-                  <input type="text" id="fname" name="fname" required />
+                  <input class="border border-warning border-1 rounded"  type="text" id="fname" name="fname" required />
                 </div>
 
-                <div class="input-area py-2">
+                <div class="input-area py-2 col-12">
                   <label class="input-label" for="sname">Soyisim:</label>
-                  <input type="text" id="sname" name="sname" required />
+                  <input class="border border-warning border-1 rounded"  type="text" id="sname" name="sname" required />
                 </div>
 
-                <div class="input-area py-2">
+                <div class="input-area py-2 col-12">
                   <label class="input-label" for="phone">Telefon Numarası:</label>
-                  <input type="tel" id="phone" name="phone" pattern="[0-9]{11,11}" placeholder="05xxxxxxxxx" required />
+                  <input class="border border-warning border-1 rounded"  type="tel" id="phone" name="phone" pattern="[0-9]{11,11}" placeholder="05xxxxxxxxx" required />
                 </div>
 
-                <div class="input-area py-2">
+                <div class="input-area py-2 col-12">
                   <label class="input-label" for="country">Şehir:</label>
-                  <select id="country">
+                  <select id="country"  class="border border-warning border-1 rounded" >
                     <option selected disabled>Şehrinizi seçiniz</option>
                     <option value="ankara">Ankara</option>
                     <option value="ist">İstanbul</option>
@@ -67,17 +71,17 @@
                   </select><br><br>
                 </div>
 
-                <div class="input-area py-2">
+                <div class="input-area py-2 col-12">
                   <input class="input-checkbox" type="checkbox" id="agree" name="agree">
                   <label for="agree">Bilgilerimin doğruluğunu onaylıyorum.</label>
                 </div>
 
-                <div class="input-area py-2">
+                <div class="input-area py-2 col-12">
                   <input class="input-checkbox" type="checkbox" id="news" name="news">
                   <label for="news">Kampanyalardan haberdar olmak istiyorum.</label>
                 </div>
 
-                <button type="submit" class="btn btn-warning mx-5 my-2 " id="btn-login">Kayıt Ol</button>
+                <button type="submit" class="btn btn-warning  my-2 col-12" id="btn-login">Kayıt Ol</button>
 
 
               </div>
@@ -88,7 +92,7 @@
         </div>
 
       </div>
-
+      <hr>
     </section>
 
     @require('../partials/footer.html')

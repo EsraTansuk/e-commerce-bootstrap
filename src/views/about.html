@@ -1,16 +1,37 @@
 <html>
-  <head>
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body class="bg-light">
-    <main class="">
-      @require('../partials/header.html')
 
-      <section class="content d-flex justify-content-center">
-        <h1>Hakkimizda</h1>
-      </section>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+</head>
 
-      @require('../partials/footer.html')
-    </main>
-  </body>
+<body class="bg-light">
+  <main>
+    <!-- Component içine parametre gönderme -->
+    <!-- @require('../partials/header.html', {"title": "First Section", "logo": "logo2.svg"}) -->
+    @require('../partials/header.html')
+    <section class="container-fluid px-0">
+      <div class="row">
+        <div class="ml-0 col-3 min-vh-100 text-bg-dark">
+          @require('../partials/sidebar.html')
+        </div>
+
+        <div class="col-9 mt-5">
+          
+        </div>
+
+      </div>
+      <hr>
+    </section>
+
+    @require('../partials/footer.html')
+  </main>
+</body>
+
 </html>
