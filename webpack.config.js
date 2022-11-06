@@ -109,9 +109,9 @@ module.exports = {
       },
       // Images loader
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/,
-        type: "asset/resource",
-      },
+        test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/,
+        type: "asset/resource"
+      }
     ],
   },
 
