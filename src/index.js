@@ -1,3 +1,4 @@
 import "./scss/main.scss";
+import app from "./js/app";
 
-console.log("Hello World!");
+document.addEventListener("DOMContentLoaded", app.init());
